@@ -3,7 +3,7 @@ if [ "$#" -ne 1 ]; then
     exit
 fi
 
-for script in rigid_motions lagrange_primal energy lagrange_mixed
+for script in lagrange_primal energy lagrange_mixed
 do
     echo -e "\e[44m Testing "$script" \e[0m";
     mpirun -np $1 python $script.py;
